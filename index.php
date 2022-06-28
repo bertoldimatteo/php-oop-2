@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/classes/food.php';
 require_once __DIR__ . '/classes/toy.php';
+require_once __DIR__ . '/classes/user.php';
 
 $food = [
     new Food('Carne Essiccata', '10€', 'Cani', 'Cibo in scatola', '10/10/2022'),
@@ -13,7 +14,9 @@ $toy = [
     new Food('Palla Gomma', '20€', 'Cani', 'Palla in materiale gommoso', 'medium'),
     new Food('Ruota per gabbia', '12€', 'Criceti', 'Ruota in plastica', 'medium'),
     new Food('Peluches topo', '15€', 'Gatti', 'Stoffa e ovatta', 'small'),
-]
+];
+
+$user = new User('User1', 'user@gmail.com', '0', '55001020', '2022');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +28,12 @@ $toy = [
 </head>
 <body>
     <h1>Animal Planet</h1>
+
+    <h2>User section</h2>
+    <p>Ciao: <?php echo $user->name ?></p>
+    <p>Mail: <?php echo $user->email ?></p>
+    <p>Expiration card: <?php echo $user->expiration ?></p>
+
     <h2>Sezione cibo</h2>
     <ul>
         <?php foreach($food as $foods) { ?>
