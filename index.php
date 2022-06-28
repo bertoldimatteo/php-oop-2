@@ -1,10 +1,9 @@
 <?php
 
-require_once __DIR__ . '/classes/product.php';
 require_once __DIR__ . '/classes/food.php';
 
-$food = new food('Carne Essiccata', '10€', 'Cani', 'Cibo in scatola', '10/10/2022');
-
+$food = new Food('Carne Essiccata', '10€', 'Cani', 'Cibo in scatola', '10/10/2022');
+// var_dump($food);die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +17,10 @@ $food = new food('Carne Essiccata', '10€', 'Cani', 'Cibo in scatola', '10/10/2
     <h1>Animal Planet</h1>
     <h2>Sezione cibo</h2>
     <ul>
-        <?php foreach($product->foods as $food) { ?>
-            <h3><?php echo $food->name ?></h3>
+        <?php foreach($food as $food) { ?>
+            <li>
+                <h3><?php echo $food->name ?></h3>
+            </li>
         <?php } ?>   
     </ul>
 </body>

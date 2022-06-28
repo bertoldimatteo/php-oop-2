@@ -1,12 +1,12 @@
 <?php
 
 class Product {
-    protected $name;
-    protected $price;
-    protected $quantity;
-    protected $animalType;
+    public $name;
+    public $price;
+    public $quantity;
+    public $animalType;
 
-    public function __construct(string $_name, int $_price, string $_animalType)
+    public function __construct(string $_name, string $_price, string $_animalType)
     {
         $this->name = $_name;
         $this->price = $_price;
