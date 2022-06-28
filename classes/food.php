@@ -6,7 +6,7 @@ class Food extends Product {
     public $type;
     public $expireDate;
 
-    public function __construct(string $_name, int $_price, string $_animalType, string $_type, string $_expireDate)
+    public function __construct(string $_name, string $_price, string $_animalType, string $_type, string $_expireDate)
     {
         parent::__construct($_name, $_price, $_animalType);
 
